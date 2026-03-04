@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" type="image/x-icon" href="https://www17.wellsfargomedia.com/assets/images/icons/ico/favicon.ico">
+    <title>Admin Sign On - Wells Fargo</title>
+    <style>
+        .admin-login-container {
+            max-width: 400px;
+            margin: 100px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        .admin-header {
+            color: #d71e28;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .logon-btn {
+            background-color: #d71e28;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <div class="container">
+        <div class="admin-login-container">
+            <div class="text-center mb-4">
+                <img src="assets/img/wf_logo_220x23.png" alt="Wells Fargo" width="200">
+            </div>
+            <h3 class="admin-header">Admin Portal</h3>
+            <form id="adminLoginForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="adminUsername" placeholder="Admin Username" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="adminPassword" placeholder="Password" required>
+                </div>
+                <button type="submit" class="logon-btn">Sign On as Admin</button>
+                <div id="loginError" class="text-danger mt-3 text-center" style="display: none;"></div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            const errorDiv = document.getElementById('loginError');
+
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    if (data.user.isAdmin) {
+                        window.location.href = '/admin-dashboard.html';
+                    } else {
+                        errorDiv.textContent = 'Access denied. Admin privileges required.';
+                        errorDiv.style.display = 'block';
+                    }
+                } else {
+                    errorDiv.textContent = data.message || 'Login failed';
+                    errorDiv.style.display = 'block';
+                }
+            } catch (err) {
+                errorDiv.textContent = 'An error occurred';
+                errorDiv.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>

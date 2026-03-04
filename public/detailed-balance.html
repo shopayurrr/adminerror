@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/loading.css">
+
+    <title>Detailed Balance - Wells Fargo</title>
+    <link rel="icon" type="image/x-icon" href="https://www17.wellsfargomedia.com/assets/images/icons/ico/favicon.ico">
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- --------------------navbar--------------------------- -->
+
+    <section class="bg-img">
+        <div class="backgrond-img">
+            <img src="assets/img/winter_afternoon.jpg" alt="">
+        </div>
+    </section>
+
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/img/wf_logo_220x23.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav profile-hedr">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" id="signOffLink">
+                                <img src="assets/img/lock_icon.png" alt="" width="14px" height="20px"
+                                    style="margin-right: 2px;">
+                                Sign Off
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                </svg> Welcome, DALE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="below-nav-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="below-nav">
+                            <div class="acont-drop">Accounts <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></div>
+                            <div class="acont-drop">Brokerage </div>
+                            <div class="acont-drop">Transfer & Pay <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></div>
+                            <div class="acont-drop">Plan & Learn <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></div>
+                            <div class="acont-drop">Security & Support <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="16" height="16" fill="currentColor" class="bi bi-chevron-down"
+                                    viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="below-below-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="accontt-home">
+                            <a href="profile.html" style="text-decoration: none; color: inherit;"><img src="assets/img/home.png" alt="" width="16" height="16"> Account Summary</a> &gt; Detailed Balance
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- --------------------Body--------------------------- -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="accont-summry-sec">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="acnt-sum">
+                                    <div class="acnt-count">
+                                        Detailed Balance Information
+                                    </div>
+                                </div>
+
+                                <div class="aconct-card-bg-white mb-4">
+                                    <div class="dale-acont-card">
+                                        <div class="dale-name-crd">
+                                            <img src="assets/img/card-icon.png" alt="" width="24" height="24">
+                                            <div>
+                                                <h4>Everyday Checking</h4>
+                                                <small>xxxx9876</small>
+                                            </div>
+                                        </div>
+                                        <div class="balance">
+                                            <h4>$45,382.67</h4>
+                                            <small>Available Balance</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="aconct-card-bg-white">
+                                    <h4 class="mb-4">Account Details</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tr>
+                                                <th>Available Balance</th>
+                                                <td>$45,382.67</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Current Balance</th>
+                                                <td>$45,382.67</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Pending Deposits</th>
+                                                <td>$0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Pending Withdrawals</th>
+                                                <td>$0.00</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Interest Earned YTD</th>
+                                                <td>$123.45</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Annual Percentage Yield</th>
+                                                <td>0.01%</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <div class="aconct-card-bg-white mt-4">
+                                    <h4 class="mb-4">Recent Transactions</h4>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Description</th>
+                                                    <th>Amount</th>
+                                                    <th>Type</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>05/07/2025</td>
+                                                    <td>DIRECT DEPOSIT - PAYROLL</td>
+                                                    <td>$2,500.00</td>
+                                                    <td>Credit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05/05/2025</td>
+                                                    <td>WITHDRAWAL - ATM</td>
+                                                    <td>-$100.00</td>
+                                                    <td>Debit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05/03/2025</td>
+                                                    <td>PAYMENT - UTILITY BILL</td>
+                                                    <td>-$125.67</td>
+                                                    <td>Debit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>05/01/2025</td>
+                                                    <td>RESTAURANT PAYMENT</td>
+                                                    <td>-$45.32</td>
+                                                    <td>Debit</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>04/30/2025</td>
+                                                    <td>GROCERY STORE PURCHASE</td>
+                                                    <td>-$78.95</td>
+                                                    <td>Debit</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="mt-3 text-center">
+                                        <a href="#" class="btn btn-outline-danger">View All Transactions</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------Footer--------------------------- -->
+
+    <section class="footer-bg-color mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-li">
+                        <ul>
+                            <li><a href="">About Wells Fargo</a></li>
+                            <li><a href="">Online Access Agreement</a></li>
+                            <li><a href="">Privacy, Cookies, Security & Legal</a></li>
+                            <li><a href="">Do not sell or share my personal information</a></li>
+                            <li><a href="">Notice of Data Collection</a></li>
+                            <li><a href="">Report Email Fraud</a></li>
+                            <li><a href="">Security Center</a></li>
+                            <li><a href="">Sitemap</a></li>
+                            <li><a href="">Give Us Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="CopyRight__copyright___LI402">© 1999 - 2025 <span lang="en">Wells Fargo.</span> All
+                        rights reserved. NMLSR ID 399801</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Initialize page loading effects
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initialize progress bar
+            const progressBar = document.getElementById("progressBar");
+            if (progressBar) {
+                // Simulate page loading progress
+                let width = 0;
+                const interval = setInterval(() => {
+                    if (width >= 100) {
+                        clearInterval(interval);
+                    } else {
+                        width += 10;
+                        progressBar.style.width = width + "%";
+                        if (width >= 100) {
+                            setTimeout(() => {
+                                progressBar.style.opacity = "0";
+                            }, 200);
+                        }
+                    }
+                }, 100);
+            }
+
+            // Add fade-in animations to elements
+            const fadeElements = [
+                document.querySelector(".acnt-count"),
+                document.querySelectorAll(".aconct-card-bg-white")[0],
+                document.querySelectorAll(".aconct-card-bg-white")[1],
+                document.querySelectorAll(".aconct-card-bg-white")[2]
+            ];
+            
+            fadeElements.forEach((element, index) => {
+                if (element) {
+                    element.classList.add("fade-in");
+                    element.classList.add(`delay-${(index + 1) * 100}`);
+                }
+            });
+        });
+        
+        // Sign off functionality
+        document.getElementById("signOffLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            const signOffTime = new Date().toLocaleString();
+            sessionStorage.setItem("signOffTime", signOffTime);
+            window.location.href = "signout.html";
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/loading.css">
+
+    <title>Account Summary - Wells Fargo</title>
+    <link rel="icon" type="image/x-icon" href="https://www17.wellsfargomedia.com/assets/images/icons/ico/favicon.ico">
+</head>
+
+<body>
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loadingSpinner">
+        <div class="spinner"></div>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    
+    <!-- --------------------navbar--------------------------- -->
+
+    <section class="bg-img">
+        <div class="backgrond-img">
+            <img src="assets/img/winter_afternoon.jpg" alt="">
+        </div>
+    </section>
+
+    <section>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="assets/img/wf_logo_220x23.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav profile-hedr">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                                </svg></a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" id="signOffLink">
+                                <img src="assets/img/lock_icon.png" alt="" width="14px" height="20px"
+                                    style="margin-right: 2px;">
+                                Sign Off
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                                </svg> Welcome, DALE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                    fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                </svg></a>
+                        </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="below-nav-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="below-nav">
+                            <div class="acont-drop">
+                                <a href="accounts.html" style="text-decoration: none; color: inherit;">
+                                    Accounts <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="acont-drop">
+                                <a href="brokerage.html" style="text-decoration: none; color: inherit;">Brokerage</a>
+                            </div>
+                            <div class="acont-drop">
+                                <a href="transfer-pay.html" style="text-decoration: none; color: inherit;">
+                                    Transfer & Pay <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="acont-drop">
+                                <a href="plan-learn.html" style="text-decoration: none; color: inherit;">
+                                    Plan & Learn <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="acont-drop">
+                                <a href="security-support.html" style="text-decoration: none; color: inherit;">
+                                    Security & Support <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="below-below-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="accontt-home">
+                            <a href="profile.html" style="text-decoration: none; color: inherit;">
+                                <img src="assets/img/home.png" alt="" width="16" height="16"> Account Summary
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- --------------------Body--------------------------- -->
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="accont-summry-sec">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="acnt-sum">
+                                    <div class="acnt-count">
+                                        Account Summary
+                                    </div>
+
+                                    <div class="clnt-details">
+                                        Login time:
+                                        Your IP Address:
+                                    </div>
+                                </div>
+
+                                <!-- <div class="profileonfo-field">
+                                    <div class="row">
+                                        <div class="col-lg-6 mb-4">
+                                            <h2 class="h2">Profile Information:</h2>
+                                            <div class="clnt-name">
+                                                <strong>Name:</strong>
+                                                DALE COOPER
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>Date of Birth:</strong>
+                                                04/15/1890
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>Primary Phone:</strong>
+                                                (202) xxx-8573
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>Secondary Phone:</strong>
+                                                (202) xxx-9876
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>Address:</strong>
+                                                000 MONTIFORE STREET, WASHINGTON, DC 20008
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>EMAIL ADDRESS FOR LEGAL NOTICES:</strong>
+                                                dale.cooper@fbi.gov
+                                            </div>
+                                            <div class="clnt-name">
+                                                <strong>TEMP EMAIL ADDRESS:</strong>
+                                                dale.cooper@yahoo.com
+                                            </div>
+                                            
+                                            <div class="clnt-name">
+                                                <strong>Social Security Number:</strong>
+                                                xxx-xx-8573
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div> -->
+
+                                <div class="aconct-card-bg-white">
+                                    <div class="available-bal">
+                                        <h4>
+                                            Available Balance
+                                        </h4>
+                                        <h4>
+                                            $45,382.67
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="aconct-card-bg-white">
+                                    <div class="dale-acont-card">
+                                        <div class="dale-name-crd">
+                                            <img src="assets/img/card-icon.png" alt="" width="24" height="24">
+                                            <div>
+                                                <h4>Everyday Checking</h4>
+                                                <small>xxxx9876</small>
+                                            </div>
+                                        </div>
+                                        <div class="balance">
+                                            <h4>$45,382.67</h4>
+                                            <small>Available Balance</small>
+                                        </div>
+                                    </div>
+                                    <div class="two-below-txt">
+                                        <div class="below-txt-balance1">
+                                            <a href="detailed-balance.html">Detailed Balance Information ></a>
+                                        </div>
+                                        <div class="below-txt-balance1">
+                                            <a href="account-options.html">More Account Options ></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="profileonfo-field mb-4">
+                        <h2 class="h2 mb-4">Profile Information</h2>
+                        
+                        <!-- Profile Tabs -->
+                        <ul class="nav nav-tabs" id="profileTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="true">Personal Details</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact Information</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="documents-tab" data-bs-toggle="tab" data-bs-target="#documents" type="button" role="tab" aria-controls="documents" aria-selected="false">Documents & Statements</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="preferences-tab" data-bs-toggle="tab" data-bs-target="#preferences" type="button" role="tab" aria-controls="preferences" aria-selected="false">Preferences</button>
+                            </li>
+                        </ul>
+                        
+                        <!-- Tab Content -->
+                        <div class="tab-content p-4 border border-top-0 rounded-bottom fade-in" id="profileTabsContent">
+                            <!-- Personal Details Tab -->
+                            <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="card mb-4 shadow-sm fade-in delay-100">
+                                            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                                <h5 class="mb-0">Personal Information</h5>
+                                                <button class="btn btn-sm btn-outline-danger" id="editPersonalBtn">Edit</button>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <p class="text-muted mb-0">Full Name</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p class="fw-bold mb-0">DALE COOPER</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <p class="text-muted mb-0">Date of Birth</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p class="fw-bold mb-0">04/15/1890</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row mb-3">
+                                                    <div class="col-md-4">
+                                                        <p class="text-muted mb-0">Social Security Number</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p class="fw-bold mb-0">xxx-xx-8573</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <p class="text-muted mb-0">Occupation</p>
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <p class="fw-bold mb-0">Special Agent</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="card shadow-sm fade-in delay-200">
+                                            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                                <h5 class="mb-0">Identity Verification</h5>
+                                                <span class="badge bg-success">Verified</span>
+                                            </div>
+                                            <div class="card-body">
+                                                <p>Your identity has been verified. This helps protect your account and ensures secure transactions.</p>
+                                                <div class="alert alert-warning">
+                                                    <div class="d-flex">
+                                                        <div class="me-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                                                <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.6.6 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56z"/>
+                                                                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>
+                                                            <p class="mb-0">For your security, some account changes may require additional verification.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="card h-100 shadow-sm fade-in delay-300">
+                                            <div class="card-body text-center">
+                                                <div class="mb-3">
+                                                    <img src="assets/img/profle-card-img.png" alt="Wells Fargo Card" class="img-fluid rounded">
+                                                </div>
+                                                <h5 class="card-title">Everyday Checking</h5>
+                                                <p class="text-muted">xxxx9876</p>
+                                                <div class="alert alert-success mb-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="me-2">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                                                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                                                            </svg>
+                                                        </div>
+                                                        <div>Card is active</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-grid gap-2">
+                                                    <a href="#" class="btn btn-outline-danger">View Card Details</a>
+                                                    <a href="#" class="btn btn-outline-secondary">Report Lost or Stolen</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Contact Information Tab -->
+                            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                                <div class="card mb-4 shadow-sm">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Address Information</h5>
+                                        <button class="btn btn-sm btn-outline-danger">Edit</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Home Address</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">000 MONTIFORE STREET, WASHINGTON, DC 20008</p>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Mailing Address</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">Same as home address</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card mb-4 shadow-sm">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Phone Information</h5>
+                                        <button class="btn btn-sm btn-outline-danger">Edit</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Primary Phone</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">(202) xxx-8573</p>
+                                                <span class="badge bg-primary">Mobile</span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Secondary Phone</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">(202) xxx-9876</p>
+                                                <span class="badge bg-secondary">Work</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="card shadow-sm">
+                                    <div class="card-header bg-light d-flex justify-content-between align-items-center">
+                                        <h5 class="mb-0">Email Information</h5>
+                                        <button class="btn btn-sm btn-outline-danger">Edit</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row mb-3">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Primary Email</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">dale.cooper@fbi.gov</p>
+                                                <span class="badge bg-success">Verified</span>
+                                                <span class="badge bg-primary">Alerts Enabled</span>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <p class="text-muted mb-0">Alternate Email</p>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <p class="fw-bold mb-0">dale.cooper@yahoo.com</p>
+                                                <span class="badge bg-warning text-dark">Verification Needed</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Documents & Statements Tab -->
+                            <div class="tab-pane fade" id="documents" role="tabpanel" aria-labelledby="documents-tab">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">Documents & Statements</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <ul class="nav nav-pills mb-3" id="documents-pills-tab" role="tablist">
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link active" id="statements-tab" data-bs-toggle="pill" data-bs-target="#statements" type="button" role="tab" aria-controls="statements" aria-selected="true">Statements</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="tax-documents-tab" data-bs-toggle="pill" data-bs-target="#tax-documents" type="button" role="tab" aria-controls="tax-documents" aria-selected="false">Tax Documents</button>
+                                                    </li>
+                                                    <li class="nav-item" role="presentation">
+                                                        <button class="nav-link" id="notices-tab" data-bs-toggle="pill" data-bs-target="#notices" type="button" role="tab" aria-controls="notices" aria-selected="false">Notices</button>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content" id="documents-pills-tabContent">
+                                                    <div class="tab-pane fade show active" id="statements" role="tabpanel" aria-labelledby="statements-tab">
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th>Statement Date</th>
+                                                                        <th>Account</th>
+                                                                        <th>Type</th>
+                                                                        <th>Actions</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>04/30/2025</td>
+                                                                        <td>Everyday Checking xxxx9876</td>
+                                                                        <td>Monthly Statement</td>
+                                                                        <td>
+                                                                            <button class="btn btn-sm btn-outline-secondary me-1">View</button>
+                                                                            <button class="btn btn-sm btn-outline-secondary">Download</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>03/31/2025</td>
+                                                                        <td>Everyday Checking xxxx9876</td>
+                                                                        <td>Monthly Statement</td>
+                                                                        <td>
+                                                                            <button class="btn btn-sm btn-outline-secondary me-1">View</button>
+                                                                            <button class="btn btn-sm btn-outline-secondary">Download</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>02/28/2025</td>
+                                                                        <td>Everyday Checking xxxx9876</td>
+                                                                        <td>Monthly Statement</td>
+                                                                        <td>
+                                                                            <button class="btn btn-sm btn-outline-secondary me-1">View</button>
+                                                                            <button class="btn btn-sm btn-outline-secondary">Download</button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="tax-documents" role="tabpanel" aria-labelledby="tax-documents-tab">
+                                                        <div class="alert alert-info">
+                                                            <p class="mb-0">No tax documents are available at this time. Tax documents for 2025 will be available in January 2026.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane fade" id="notices" role="tabpanel" aria-labelledby="notices-tab">
+                                                        <div class="alert alert-info">
+                                                            <p class="mb-0">You have no notices at this time.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Preferences Tab -->
+                            <div class="tab-pane fade" id="preferences" role="tabpanel" aria-labelledby="preferences-tab">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card mb-4 shadow-sm">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">Communication Preferences</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-3">Choose how you'd like to receive updates and information from us.</p>
+                                                
+                                                <div class="mb-3">
+                                                    <label class="form-label">Account Alerts</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="alertEmail" checked>
+                                                        <label class="form-check-label" for="alertEmail">Email</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="alertText" checked>
+                                                        <label class="form-check-label" for="alertText">Text Message</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="alertApp">
+                                                        <label class="form-check-label" for="alertApp">Mobile App Notification</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <label class="form-label">Marketing Communications</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="marketingEmail">
+                                                        <label class="form-check-label" for="marketingEmail">Email</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="marketingMail">
+                                                        <label class="form-check-label" for="marketingMail">Postal Mail</label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="marketingPhone">
+                                                        <label class="form-check-label" for="marketingPhone">Phone</label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-grid">
+                                                    <button class="btn btn-danger">Save Preferences</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-6">
+                                        <div class="card shadow-sm">
+                                            <div class="card-header bg-light">
+                                                <h5 class="mb-0">Document Delivery</h5>
+                                            </div>
+                                            <div class="card-body">
+                                                <p class="mb-3">Choose how you'd like to receive your account documents.</p>
+                                                
+                                                <div class="mb-3">
+                                                    <label class="form-label">Statement Delivery</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="statementDelivery" id="statementElectronic" checked>
+                                                        <label class="form-check-label" for="statementElectronic">
+                                                            Electronic (Email)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="statementDelivery" id="statementPaper">
+                                                        <label class="form-check-label" for="statementPaper">
+                                                            Paper (Mail)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="statementDelivery" id="statementBoth">
+                                                        <label class="form-check-label" for="statementBoth">
+                                                            Both Electronic and Paper
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="mb-3">
+                                                    <label class="form-label">Tax Document Delivery</label>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="taxDelivery" id="taxElectronic" checked>
+                                                        <label class="form-check-label" for="taxElectronic">
+                                                            Electronic (Email)
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="taxDelivery" id="taxPaper">
+                                                        <label class="form-check-label" for="taxPaper">
+                                                            Paper (Mail)
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="d-grid">
+                                                    <button class="btn btn-danger">Save Preferences</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------------Footer--------------------------- -->
+
+    <section class="footer-bg-color mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-li">
+                        <ul>
+                            <li><a href="">About Wells Fargo</a></li>
+                            <li><a href="">Online Access Agreement</a></li>
+                            <li><a href="">Privacy, Cookies, Security & Legal</a></li>
+                            <li><a href="">Do not sell or share my personal information</a></li>
+                            <li><a href="">Notice of Data Collection</a></li>
+                            <li><a href="">Report Email Fraud</a></li>
+                            <li><a href="">Security Center</a></li>
+                            <li><a href="">Sitemap</a></li>
+                            <li><a href="">Give Us Feedback</a></li>
+                        </ul>
+                    </div>
+                    <div class="CopyRight__copyright___LI402">© 1999 - 2025 <span lang="en">Wells Fargo.</span> All
+                        rights reserved. NMLSR ID 399801</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/script.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Sign off functionality
+        document.getElementById("signOffLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            const signOffTime = new Date().toLocaleString();
+            sessionStorage.setItem("signOffTime", signOffTime);
+            window.location.href = "signout.html";
+        });
+        
+        // Profile Information Tab Functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            // Edit Personal Information
+            const editPersonalBtn = document.getElementById("editPersonalBtn");
+            if (editPersonalBtn) {
+                editPersonalBtn.addEventListener("click", function() {
+                    // Get all the info fields
+                    const infoRows = document.querySelectorAll("#personal .card:first-of-type .card-body .row");
+                    
+                    // Check if we're in edit mode already
+                    const isEditing = this.getAttribute("data-editing") === "true";
+                    
+                    if (!isEditing) {
+                        // Change button text to "Save"
+                        this.textContent = "Save Changes";
+                        this.setAttribute("data-editing", "true");
+                        
+                        // Replace text with input fields
+                        infoRows.forEach(row => {
+                            const label = row.querySelector(".col-md-4 p").textContent;
+                            const value = row.querySelector(".col-md-8 p").textContent;
+                            const inputCol = row.querySelector(".col-md-8");
+                            
+                            // Save original value
+                            inputCol.setAttribute("data-original", value);
+                            
+                            // Replace with input except for SSN
+                            if (label.includes("Social Security")) {
+                                inputCol.innerHTML = `<p class="fw-bold mb-0">${value}</p><small class="text-muted">For security reasons, SSN cannot be edited online</small>`;
+                            } else {
+                                inputCol.innerHTML = `<input type="text" class="form-control" value="${value}">`;
+                            }
+                        });
+                    } else {
+                        // Change button text back to "Edit"
+                        this.textContent = "Edit";
+                        this.setAttribute("data-editing", "false");
+                        
+                        // Replace input fields with text
+                        infoRows.forEach(row => {
+                            const inputCol = row.querySelector(".col-md-8");
+                            const input = inputCol.querySelector("input");
+                            
+                            // Get updated value or original if no input exists
+                            let newValue = inputCol.getAttribute("data-original");
+                            if (input) {
+                                newValue = input.value;
+                            }
+                            
+                            // Update with new value
+                            inputCol.innerHTML = `<p class="fw-bold mb-0">${newValue}</p>`;
+                        });
+                    }
+                });
+            }
+            
+            // Tab Navigation - add fade-in effects
+            const tabLinks = document.querySelectorAll('[data-bs-toggle="tab"]');
+            tabLinks.forEach(tabLink => {
+                tabLink.addEventListener('shown.bs.tab', function (event) {
+                    // Add fade-in class to elements in the newly shown tab
+                    const tabId = event.target.getAttribute('data-bs-target');
+                    const tabContent = document.querySelector(tabId);
+                    const fadeElements = tabContent.querySelectorAll('.card');
+                    
+                    fadeElements.forEach((element, index) => {
+                        element.classList.add('fade-in');
+                        element.classList.add(`delay-${(index + 1) * 100}`);
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
